@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <script type="module" src="assets/js/populateAbout.js"></script>
+    <script type="module" src="assets/js/populateSkills.js"></script>
+    <title>Dgama Portfolio</title>
+</head>
+
+<body>
+    <!-- <div id="app"></div> -->
+    <div class="w-3/4 m-auto overflow-hidden flex flex-row">
+        <div class="w-4/12 bg-gray-400 flex flex-col items-center pt-5">
+            <img src="assets/images/profEdit200.jpg" alt="Pic 01" />
+            <ul>
+                <li><a href="#" data-nav-selection="about">About</a></li>
+                <li><a href="#" data-nav-selection="skills">Skills</a></li>
+                <li><a href="#" data-nav-selection="projects">Projects</a></li>
+                <li><a href="#" data-nav-selection="workExperience">Work Experience</a></li>
+                <li><a href="#" data-nav-selection="education">Education</a></li>
+                <li><a href="#" data-nav-selection="contact">Contact</a></li>
+            </ul>
+        </div>
+
+        <div class="w-full bg-gray-300 flex flex-col p-5">
+            <div class="">
+                <h2 class="text-4xl font-semibold mb-4">About</h2>
+                <div id="about" class=""></div>
+            </div>
+            <div class="">
+                <h2 class="text-4xl font-semibold mb-4">Skills</h2>
+                <div id="skills" class="grid grid-cols-2"></div>
+            </div>
+            <div class="">
+                <h2 class="text-4xl font-semibold mb-4">Projects</h2>
+                <div id="projects" class="grid grid-cols-2"></div>
+            </div>
+            <div class="">
+                <h2 class="text-4xl font-semibold mb-4">Work Experience</h2>
+                <div id="Experience" class="grid grid-cols-2"></div>
+            </div>
+            <div class="">
+                <h2 class="text-4xl font-semibold mb-4">Education</h2>
+                <div id="education" class="grid grid-cols-2"></div>
+            </div>
+            <div class="">
+                <h2 class="text-4xl font-semibold mb-4">Contact</h2>
+                <div id="contact" class="grid grid-cols-2"></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
