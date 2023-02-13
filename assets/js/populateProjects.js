@@ -27,7 +27,7 @@ export function populateProjects(items, id) {
 		rightBody.append(skillList);
 
 		let body = document.createElement("div");
-		body.className = "flex ";
+		body.className = "grid grid-cols-2";
 		body.append(image);
 		body.append(rightBody);
 
