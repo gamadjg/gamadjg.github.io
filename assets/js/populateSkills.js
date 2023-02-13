@@ -1,6 +1,4 @@
-import { default as data } from "./db.js";
-
-function populateSkills(items, id) {
+export function populateSkills(items, id) {
 	let skillsTag = document.getElementById(id);
 	for (let i = 0; i < items.length; i++) {
 		let h3 = document.createElement("h3");
@@ -18,4 +16,3 @@ function populateSkills(items, id) {
 		skillsTag.append(skillSection);
 	}
 }
-populateSkills(data.skills, "skills");
