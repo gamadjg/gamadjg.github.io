@@ -30,6 +30,7 @@ export function populateWork(items, id) {
 
 		let tags = document.createElement("p");
 		tags.className = "";
+		tags.innerHTML = items[i].tags;
 
 		let body = document.createElement("div");
 		body.append(title);
