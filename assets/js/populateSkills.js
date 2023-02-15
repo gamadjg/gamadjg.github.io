@@ -1,18 +1,26 @@
 export function populateSkills(items, id) {
-	let skillsTag = document.getElementById(id);
+	let container = document.getElementById(id);
+	let sectionTitle = document.createElement("h2");
+	sectionTitle.className = "text-4xl font-semibold";
+	sectionTitle.innerHTML = "Skills";
+	container.append(sectionTitle);
+
+	let skillsContainer = document.createElement("div");
+	skillsContainer.className = "mb-5 grid grid-cols-2";
+
 	for (let i = 0; i < items.length; i++) {
-		let h3 = document.createElement("h3");
-		h3.innerHTML = items[i].title;
-		h3.className = "text-xl font-semibold mb-0";
+		let skillsTitle = document.createElement("h3");
+		skillsTitle.innerHTML = items[i].title;
+		skillsTitle.className = "text-xl font-semibold mb-0";
 
-		let skillList = document.createElement("p");
-		skillList.innerHTML = items[i].skillName;
+		let skillsList = document.createElement("p");
+		skillsList.innerHTML = items[i].skillName;
 
-		let skillSection = document.createElement("div");
-		skillSection.className = "mb-5";
-		skillSection.append(h3);
-		skillSection.append(skillList);
+		let subContainer = document.createElement("div");
 
-		skillsTag.append(skillSection);
+		subContainer.append(skillsTitle);
+		subContainer.append(skillsList);
+		skillsContainer.append(subContainer);
 	}
+	container.append(skillsContainer);
 }

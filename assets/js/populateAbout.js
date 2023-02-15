@@ -1,6 +1,12 @@
 export function populateAbout(items, id) {
-	let aboutTag = document.getElementById(id);
-	let aboutBody = document.createElement("p");
-	aboutBody.innerHTML = items;
-	aboutTag.append(aboutBody);
+	let sectionTitle = document.createElement("h2");
+	sectionTitle.className = "text-4xl font-semibold";
+	sectionTitle.innerHTML = "About";
+
+	let body = document.createElement("p");
+	body.innerHTML = items;
+
+	let container = document.getElementById(id);
+	container.append(sectionTitle);
+	container.append(body);
 }

@@ -1,5 +1,10 @@
-export function populateWork(items, id) {
-	let workTag = document.getElementById(id);
+export function populateExperience(items, id) {
+	let container = document.getElementById(id);
+	let sectionTitle = document.createElement("h2");
+	sectionTitle.className = "text-4xl font-semibold";
+	sectionTitle.innerHTML = "Work Experience";
+	container.append(sectionTitle);
+
 	for (let i = 0; i < items.length; i++) {
 		let companyName = document.createElement("h3");
 		companyName.innerHTML = items[i].company;
@@ -42,6 +47,6 @@ export function populateWork(items, id) {
 		experienceContainer.append(header);
 		experienceContainer.append(body);
 
-		workTag.append(experienceContainer);
+		container.append(experienceContainer);
 	}
 }

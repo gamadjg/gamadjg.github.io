@@ -1,5 +1,10 @@
 export function populateProjects(items, id) {
-	let projectsTag = document.getElementById(id);
+	let container = document.getElementById(id);
+	let sectionTitle = document.createElement("h2");
+	sectionTitle.className = "text-4xl font-semibold";
+	sectionTitle.innerHTML = "Projects";
+	container.append(sectionTitle);
+
 	for (let i = 0; i < items.length; i++) {
 		let projectName = document.createElement("h3");
 		projectName.innerHTML = items[i].projectName;
@@ -35,6 +40,6 @@ export function populateProjects(items, id) {
 		project.className = "mb-5";
 		project.append(header);
 		project.append(body);
-		projectsTag.append(project);
+		container.append(project);
 	}
 }

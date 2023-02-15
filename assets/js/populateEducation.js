@@ -1,5 +1,10 @@
 export function populateEducation(items, id) {
-	let skillsTag = document.getElementById(id);
+	let container = document.getElementById(id);
+	let sectionTitle = document.createElement("h2");
+	sectionTitle.className = "text-4xl font-semibold";
+	sectionTitle.innerHTML = "Education";
+	container.append(sectionTitle);
+
 	for (let i = 0; i < items.length; i++) {
 		let title = document.createElement("h3");
 		title.className = "text-xl font-semibold mb-0";
@@ -45,6 +50,6 @@ export function populateEducation(items, id) {
 		educationContainer.append(header);
 		educationContainer.append(body);
 
-		skillsTag.append(educationContainer);
+		container.append(educationContainer);
 	}
 }
