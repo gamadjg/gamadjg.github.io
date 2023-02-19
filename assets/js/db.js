@@ -184,22 +184,22 @@ export default {
 		{
 			text: "LinkedIn",
 			link: "https://www.linkedin.com/in/gamadavid/",
-			icon: "",
+			icon: "linkedin",
 		},
 		{
 			text: "GitHub",
 			link: "https://github.com/gamadjg",
-			icon: "",
+			icon: "github",
 		},
 		{
 			text: "LeetCode",
 			link: "https://leetcode.com/gamadjg/",
-			icon: "",
+			icon: "leetcode",
 		},
-		{
-			text: "HackerRank",
-			link: "https://www.hackerrank.com/gamadavid36",
-			icon: "",
-		},
+		// {
+		// 	text: "HackerRank",
+		// 	link: "https://www.hackerrank.com/gamadavid36",
+		// 	icon: "",
+		// },
 	],
 };
