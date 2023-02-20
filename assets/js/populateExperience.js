@@ -38,11 +38,11 @@ export function populateExperience(items, id) {
 		}
 
 		const tagList = document.createElement("ul");
-		tagList.className = "flex flex-wrap gap-5";
+		tagList.className = "flex flex-wrap";
 		for (let tagIndex = 0; tagIndex < items[expIndex].tags.length; tagIndex++) {
 			const listItem = document.createElement("li");
 			listItem.innerHTML = items[expIndex].tags[tagIndex];
-			listItem.className = "bg-teal-500 rounded text-white p-1";
+			listItem.className = "bg-teal-500 rounded text-white p-1 m-1";
 			tagList.append(listItem);
 		}
 
