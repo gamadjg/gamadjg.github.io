@@ -1,45 +1,64 @@
 export function populateProjects(items, id) {
-	let container = document.getElementById(id);
-	let sectionTitle = document.createElement("h2");
+	const container = document.getElementById(id);
+
+	const sectionTitle = document.createElement("h2");
 	sectionTitle.className = "text-4xl font-semibold";
 	sectionTitle.innerHTML = "Projects";
-	container.append(sectionTitle);
+
+	const projectList = document.createElement("div");
+	projectList.className = "bg-gray-300 rounded p-5";
 
 	for (let i = 0; i < items.length; i++) {
-		let projectName = document.createElement("h3");
+		const projectName = document.createElement("h3");
 		projectName.innerHTML = items[i].projectName;
 		projectName.className = "text-xl font-semibold mb-0";
 
-		let repoLink = document.createElement("a");
+		const repoLink = document.createElement("a");
 		repoLink.href = items[i].repo;
 		repoLink.innerHTML = "(Github)";
 
-		let header = document.createElement("div");
+		const header = document.createElement("div");
 		header.className = "flex items-center";
-		header.append(projectName);
-		header.append(repoLink);
 
-		let image = document.createElement("i");
-		image.className = "fa-sharp fa-solid fa-image w-6/12";
+		const image = document.createElement("i");
+		image.className = "fa-sharp fa-solid fa-image flex self-center";
 
-		let summary = document.createElement("p");
+		const summary = document.createElement("p");
 		summary.innerHTML = items[i].summary;
-		let rightBody = document.createElement("div");
-		let skillList = document.createElement("p");
-		skillList.innerHTML = ` Tech: ${items[i].techStack}`;
+
+		const skills = document.createElement("ul");
+		skills.className = "flex flex-wrap";
+		for (let j = 0; j < items[i].techStack.length; j++) {
+			const skill = document.createElement("li");
+			skill.className = "bg-teal-500 text-white rounded p-1 m-1";
+			skill.innerHTML = items[i].techStack[j];
+			skills.append(skill);
+		}
+
+		const rightBody = document.createElement("div");
+		rightBody.className = "col-start-2 col-span-4";
+
+		const body = document.createElement("div");
+		body.className = "grid grid-cols-4 ml-1";
+
+		const project = document.createElement("div");
+		project.className = "mb-5";
 
 		rightBody.append(summary);
-		rightBody.append(skillList);
 
-		let body = document.createElement("div");
-		body.className = "grid grid-cols-2";
 		body.append(image);
 		body.append(rightBody);
 
-		let project = document.createElement("div");
-		project.className = "mb-5";
+		header.append(projectName);
+		header.append(repoLink);
+
 		project.append(header);
 		project.append(body);
-		container.append(project);
+		project.append(skills);
+
+		projectList.append(project);
 	}
+
+	container.append(sectionTitle);
+	container.append(projectList);
 }
