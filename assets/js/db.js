@@ -8,12 +8,6 @@ export default {
 			"After a year of teaching myself via self paced online courses, I enrolled myself into a rigorous coding bootcamp to flesh out my knowledge and fill in any remaining gaps.",
 		],
 	},
-	contact: {
-		text: [
-			"If you would like to get in touch with me, My email address is: david@gama.dev",
-		],
-		email: "david@gama.dev",
-	},
 	skills: [
 		{
 			title: "Languages",
@@ -174,21 +168,26 @@ export default {
 			icon: "",
 		},
 	],
-	profiles: [
-		{
-			text: "LinkedIn",
-			link: "https://www.linkedin.com/in/gamadavid/",
-			icon: "linkedin",
+	footer: {
+		profiles: [
+			{
+				text: "LinkedIn",
+				link: "https://www.linkedin.com/in/gamadavid/",
+				icon: "linkedin",
+			},
+			{
+				text: "GitHub",
+				link: "https://github.com/gamadjg",
+				icon: "github",
+			},
+			{
+				text: "LeetCode",
+				link: "https://leetcode.com/gamadjg/",
+				icon: "leetcode",
+			},
+		],
+		contact: {
+			email: "david@gama.dev",
 		},
-		{
-			text: "GitHub",
-			link: "https://github.com/gamadjg",
-			icon: "github",
-		},
-		{
-			text: "LeetCode",
-			link: "https://leetcode.com/gamadjg/",
-			icon: "leetcode",
-		},
-	],
+	},
 };
