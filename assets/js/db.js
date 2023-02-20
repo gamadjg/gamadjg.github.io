@@ -196,10 +196,5 @@ export default {
 			link: "https://leetcode.com/gamadjg/",
 			icon: "leetcode",
 		},
-		// {
-		// 	text: "HackerRank",
-		// 	link: "https://www.hackerrank.com/gamadavid36",
-		// 	icon: "",
-		// },
 	],
 };
