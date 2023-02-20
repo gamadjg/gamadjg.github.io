@@ -8,7 +8,7 @@ import { populateEducation } from "./populateEducation.js";
 import { populateFooter } from "./populateFooter.js";
 import { scroll } from "./scroll.js";
 
-populateAbout(data.bio.about, "about");
+populateAbout(data.bio, "about");
 populateSkills(data.skills, "skills");
 populateProjects(data.projects, "projects");
 populateExperience(data.experience, "experience");

@@ -7,7 +7,12 @@ export function populateAbout(items, id) {
 
 	const aboutContainer = document.createElement("div");
 	aboutContainer.className = "bg-gray-300 rounded p-5";
-	aboutContainer.innerHTML = items;
+	for (let index = 0; index < items.length; index++) {
+		const aboutItem = document.createElement("p");
+		aboutItem.className = "mb-3";
+		aboutItem.innerHTML = items[index];
+		aboutContainer.append(aboutItem);
+	}
 
 	container.append(sectionTitle);
 	container.append(aboutContainer);
