@@ -1,52 +1,62 @@
 export function populateExperience(items, id) {
-	let container = document.getElementById(id);
-	let sectionTitle = document.createElement("h2");
+	const container = document.getElementById(id);
+	const sectionTitle = document.createElement("h2");
 	sectionTitle.className = "text-4xl font-semibold";
 	sectionTitle.innerHTML = "Work Experience";
 	container.append(sectionTitle);
 
-	for (let i = 0; i < items.length; i++) {
-		let companyName = document.createElement("h3");
-		companyName.innerHTML = items[i].company;
+	const expList = document.createElement("div");
+	expList.className = "bg-gray-300 rounded p-5";
+
+	for (let expIndex = 0; expIndex < items.length; expIndex++) {
+		const companyName = document.createElement("h3");
+		companyName.innerHTML = items[expIndex].company;
 		companyName.className = "text-xl font-semibold mb-0";
 
-		let duration = document.createElement("p");
-		duration.innerHTML = items[i].duration;
+		const duration = document.createElement("p");
+		duration.innerHTML = items[expIndex].duration;
 		duration.className = "text-l font-semibold";
 
-		let header = document.createElement("div");
+		const header = document.createElement("div");
 		header.className = "flex items-center justify-between";
 		header.append(companyName);
 		header.append(duration);
 
-		let title = document.createElement("p");
+		const title = document.createElement("p");
 		title.className = "";
+		title.innerHTML = items[expIndex].title;
 
-		let detailsList = document.createElement("ul");
-		for (let x = 0; x < items[i].details.length; x++) {
-			let listItem = document.createElement("li");
-			listItem.innerHTML = items[i].details[x];
+		const detailsList = document.createElement("ul");
+		for (
+			let detailIndex = 0;
+			detailIndex < items[expIndex].details.length;
+			detailIndex++
+		) {
+			const listItem = document.createElement("li");
+			listItem.innerHTML = items[expIndex].details[detailIndex];
 			detailsList.append(listItem);
 		}
 
-		// detailsList.innerHTML = items[i].details.map(x =>{
-		//     "<li>"
-		// })
+		const tagList = document.createElement("ul");
+		tagList.className = "flex flex-wrap gap-5";
+		for (let tagIndex = 0; tagIndex < items[expIndex].tags.length; tagIndex++) {
+			const listItem = document.createElement("li");
+			listItem.innerHTML = items[expIndex].tags[tagIndex];
+			listItem.className = "bg-teal-500 rounded text-white p-1";
+			tagList.append(listItem);
+		}
 
-		let tags = document.createElement("p");
-		tags.className = "";
-		tags.innerHTML = items[i].tags;
-
-		let body = document.createElement("div");
+		const body = document.createElement("div");
 		body.append(title);
 		body.append(detailsList);
-		body.append(tags);
+		body.append(tagList);
 
-		let experienceContainer = document.createElement("div");
-		experienceContainer.className = "mb-5";
-		experienceContainer.append(header);
-		experienceContainer.append(body);
+		const expItem = document.createElement("div");
+		expItem.className = "mb-5";
+		expItem.append(header);
+		expItem.append(body);
 
-		container.append(experienceContainer);
+		expList.append(expItem);
 	}
+	container.append(expList);
 }
