@@ -1,13 +1,8 @@
 export default {
-	bio: {
-		about: [
-			"My name is David and I am a full stack software developer having come into programming from over six years in the customer service industry ranging from food prep to IT helpdesk/consulting.",
-			"My interests heavily lie within architecting and designing foundations for scaling solutions.",
-			"Throughout 4 years of startup IT Operations consulting, my enthusiasm peaked whenever I would find myself picking up Python or Powershell whenever I needed to implement a scalable solution.",
-			"Realizing that a solid foundation and some creative organization went a very long way in reducing future issues for myself and everyone around me, I made the decision to expand my programming knowledge past scripting and into learning the ins and outs of full-stack software engineering.",
-			"After a year of teaching myself via self paced online courses, I enrolled myself into a rigorous coding bootcamp to flesh out my knowledge and fill in any remaining gaps.",
-		],
-	},
+	bio: [
+		"My name is David, and I am a full-stack developer, transitioned into programming from over six years in the customer service industry ranging from food prep to IT helpdesk/consulting.",
+		"My areas of interest are archery, health & fitness, linguistics, and taking mountains of information and making sense of it",
+	],
 	skills: [
 		{
 			title: "Languages",
