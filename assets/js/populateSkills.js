@@ -6,7 +6,7 @@ export function populateSkills(items, id) {
 	container.append(sectionTitle);
 
 	let skillsContainer = document.createElement("div");
-	skillsContainer.className = "grid grid-cols-2 bg-gray-300 rounded p-5";
+	skillsContainer.className = "grid sm:grid-cols-2 bg-gray-300 rounded p-5";
 
 	for (let i = 0; i < items.length; i++) {
 		let skillsTitle = document.createElement("h3");
