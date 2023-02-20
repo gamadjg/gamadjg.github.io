@@ -70,7 +70,6 @@ export default {
 			projectName: "Archery Store",
 			image: "",
 			summary: "Ecommerce archery store",
-			repo: "",
 			repo: "https://github.com/gamadjg/archery-store",
 			techStack: [
 				"Java",
@@ -86,7 +85,6 @@ export default {
 			projectName: "Restaurant Mr.Camaron",
 			image: "",
 			summary: "Mexican Food Restaurant Website",
-			repo: "",
 			repo: "https://github.com/gamadjg/restaurant-mr.camaron",
 			techStack: [
 				"Javascript",
@@ -102,7 +100,6 @@ export default {
 			projectName: "Text Parser",
 			image: "",
 			summary: "Semantic Text Comparator",
-			repo: "",
 			repo: "https://github.com/gamadjg/text-parser",
 			techStack: [
 				"Python",
@@ -119,7 +116,6 @@ export default {
 			projectName: "Odin Project: Members Only",
 			image: "",
 			summary: "",
-			repo: "",
 			repo: "https://github.com/gamadjg/members-only",
 			techStack: ["Javascript", "Python", "Flask", "Tailwindcss", "React"],
 		},
@@ -127,7 +123,6 @@ export default {
 			projectName: "Odin Project: Bang! Card Game Inventory",
 			image: "",
 			summary: "",
-			repo: "",
 			repo: "https://github.com/gamadjg/bang-inventory-app",
 			techStack: ["Javascript", "Python", "Flask", "Tailwindcss", "React"],
 		},
@@ -135,7 +130,6 @@ export default {
 			projectName: "Odin Project: Calculator",
 			image: "",
 			summary: "",
-			repo: "",
 			repo: "https://github.com/gamadjg/calculator",
 			techStack: ["Javascript", "Python", "Flask", "Tailwindcss", "React"],
 		},
