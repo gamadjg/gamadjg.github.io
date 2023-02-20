@@ -13,5 +13,5 @@ populateSkills(data.skills, "skills");
 populateProjects(data.projects, "projects");
 populateExperience(data.experience, "experience");
 populateEducation(data.education, "education");
-populateFooter(data.profiles, "footer");
+populateFooter(data.footer, "footer");
 scroll();
