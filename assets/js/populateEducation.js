@@ -1,7 +1,7 @@
 export function populateEducation(items, id) {
 	const container = document.getElementById(id);
 	const sectionTitle = document.createElement("h2");
-	sectionTitle.className = "text-4xl font-semibold";
+	sectionTitle.className = "text-4xl font-semibold mb-1";
 	sectionTitle.innerHTML = "Education";
 	container.append(sectionTitle);
 
@@ -9,48 +9,63 @@ export function populateEducation(items, id) {
 	eduList.className = "bg-gray-300 rounded p-5";
 
 	for (let eduIndex = 0; eduIndex < items.length; eduIndex++) {
-		const title = document.createElement("h3");
-		title.className = "text-xl font-semibold mb-0";
-		title.innerHTML = items[eduIndex].title;
-
-		const duration = document.createElement("p");
-		duration.className = "";
-		duration.innerHTML = items[eduIndex].duration;
-
+		const body = document.createElement("div");
+		const eduItem = document.createElement("div");
 		const header = document.createElement("div");
 		header.className = "flex items-center justify-between";
-		header.append(title);
+
+		const leftHeader = document.createElement("div");
+		leftHeader.className = "flex items-center";
+
+		const verticalLine = document.createElement("p");
+		verticalLine.className = "ml-1 mr-1";
+		verticalLine.innerHTML = "|";
+
+		const title = document.createElement("h3");
+		title.className = "text-xl font-semibold";
+		title.innerHTML = items[eduIndex].title;
+		leftHeader.append(title);
+
+		if (items[eduIndex].link != "") {
+			leftHeader.append(verticalLine);
+
+			const link = document.createElement("a");
+			link.href = items[eduIndex].link;
+			link.className = "underline";
+			link.innerHTML = "Certificate";
+			leftHeader.append(link);
+		}
+		header.append(leftHeader);
+
+		const duration = document.createElement("p");
+		duration.className = "font-semibold";
+		duration.innerHTML = items[eduIndex].duration;
 		header.append(duration);
 
 		const location = document.createElement("p");
 		location.className = "";
 		location.innerHTML = items[eduIndex].location;
-
-		const details = document.createElement("ul");
-		details.className = "list-disc pl-5";
-		for (let index = 0; index < items[eduIndex].details.length; index++) {
-			const listItem = document.createElement("li");
-			listItem.innerHTML = items[eduIndex].details[index];
-			details.append(listItem);
-		}
+		body.append(location);
 
 		const tags = document.createElement("ul");
-		tags.className = "flex flex-wrap";
+		tags.className = "flex flex-wrap gap-1 mb-1";
+
 		for (let index = 0; index < items[eduIndex].tags.length; index++) {
 			const tag = document.createElement("li");
-			tag.className = "bg-teal-500 text-white rounded p-1 m-1";
+			tag.className = "bg-teal-500 text-white rounded pl-1 pr-1";
 			tag.innerHTML = items[eduIndex].tags[index];
 			tags.append(tag);
 		}
-
-		const body = document.createElement("div");
-		body.append(location);
-		body.append(details);
 		body.append(tags);
 
-		const eduItem = document.createElement("div");
 		eduItem.append(header);
 		eduItem.append(body);
+
+		if (eduIndex != items.length - 1) {
+			const lineBreak = document.createElement("hr");
+			lineBreak.className = "mb-5 border-black";
+			eduItem.append(lineBreak);
+		}
 
 		eduList.append(eduItem);
 	}
