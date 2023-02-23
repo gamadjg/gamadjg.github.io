@@ -2,7 +2,7 @@ export function populateAbout(items, id) {
 	const container = document.getElementById(id);
 
 	const sectionTitle = document.createElement("h2");
-	sectionTitle.className = "text-4xl font-semibold";
+	sectionTitle.className = "text-4xl font-semibold mb-1";
 	sectionTitle.innerHTML = "About";
 
 	const aboutContainer = document.createElement("div");

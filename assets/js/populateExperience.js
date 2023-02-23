@@ -1,7 +1,7 @@
 export function populateExperience(items, id) {
 	const container = document.getElementById(id);
 	const sectionTitle = document.createElement("h2");
-	sectionTitle.className = "text-4xl font-semibold";
+	sectionTitle.className = "text-4xl font-semibold mb-1";
 	sectionTitle.innerHTML = "Work Experience";
 	container.append(sectionTitle);
 
@@ -9,6 +9,10 @@ export function populateExperience(items, id) {
 	expList.className = "bg-gray-300 rounded p-5";
 
 	for (let expIndex = 0; expIndex < items.length; expIndex++) {
+		const body = document.createElement("div");
+		const expItem = document.createElement("div");
+		expItem.className = "mb-5";
+
 		const companyName = document.createElement("h3");
 		companyName.innerHTML = items[expIndex].company;
 		companyName.className = "text-xl font-semibold mb-0";
@@ -25,6 +29,7 @@ export function populateExperience(items, id) {
 		const title = document.createElement("p");
 		title.className = "";
 		title.innerHTML = items[expIndex].title;
+		body.append(title);
 
 		const detailsList = document.createElement("ul");
 		for (
@@ -36,23 +41,18 @@ export function populateExperience(items, id) {
 			listItem.innerHTML = items[expIndex].details[detailIndex];
 			detailsList.append(listItem);
 		}
+		body.append(detailsList);
 
 		const tagList = document.createElement("ul");
-		tagList.className = "flex flex-wrap";
+		tagList.className = "flex flex-wrap gap-1";
 		for (let tagIndex = 0; tagIndex < items[expIndex].tags.length; tagIndex++) {
 			const listItem = document.createElement("li");
 			listItem.innerHTML = items[expIndex].tags[tagIndex];
-			listItem.className = "bg-teal-500 rounded text-white p-1 m-1";
+			listItem.className = "bg-teal-500 rounded text-white pl-1 pr-1";
 			tagList.append(listItem);
 		}
-
-		const body = document.createElement("div");
-		body.append(title);
-		body.append(detailsList);
 		body.append(tagList);
 
-		const expItem = document.createElement("div");
-		expItem.className = "mb-5";
 		expItem.append(header);
 		expItem.append(body);
 

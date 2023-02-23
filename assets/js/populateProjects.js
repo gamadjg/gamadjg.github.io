@@ -2,7 +2,7 @@ export function populateProjects(items, id) {
 	const container = document.getElementById(id);
 
 	const sectionTitle = document.createElement("h2");
-	sectionTitle.className = "text-4xl font-semibold";
+	sectionTitle.className = "text-4xl font-semibold mb-1";
 	sectionTitle.innerHTML = "Projects";
 
 	const projectList = document.createElement("div");
@@ -27,10 +27,10 @@ export function populateProjects(items, id) {
 		summary.innerHTML = items[i].summary;
 
 		const skills = document.createElement("ul");
-		skills.className = "flex flex-wrap";
+		skills.className = "flex flex-wrap gap-1 mb-1";
 		for (let j = 0; j < items[i].techStack.length; j++) {
 			const skill = document.createElement("li");
-			skill.className = "bg-teal-500 text-white rounded p-1 m-1";
+			skill.className = "bg-teal-500 text-white rounded pl-1 pr-1";
 			skill.innerHTML = items[i].techStack[j];
 			skills.append(skill);
 		}
@@ -42,7 +42,7 @@ export function populateProjects(items, id) {
 		body.className = "grid grid-cols-4 ml-1";
 
 		const project = document.createElement("div");
-		project.className = "mb-5";
+		// project.className = "mb-5";
 
 		rightBody.append(summary);
 
@@ -55,6 +55,12 @@ export function populateProjects(items, id) {
 		project.append(header);
 		project.append(body);
 		project.append(skills);
+
+		if (i != items.length - 1) {
+			const lineBreak = document.createElement("hr");
+			lineBreak.className = "mb-5 border-black";
+			project.append(lineBreak);
+		}
 
 		projectList.append(project);
 	}

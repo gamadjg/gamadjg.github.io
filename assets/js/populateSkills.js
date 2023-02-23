@@ -1,7 +1,7 @@
 export function populateSkills(items, id) {
 	let container = document.getElementById(id);
 	let sectionTitle = document.createElement("h2");
-	sectionTitle.className = "text-4xl font-semibold";
+	sectionTitle.className = "text-4xl font-semibold mb-1";
 	sectionTitle.innerHTML = "Skills";
 	container.append(sectionTitle);
 
