@@ -13,9 +13,14 @@ export function populateProjects(items, id) {
 		projectName.innerHTML = items[i].projectName;
 		projectName.className = "text-xl font-semibold mb-0";
 
+		const verticalLine = document.createElement("p");
+		verticalLine.className = "ml-1 mr-1";
+		verticalLine.innerHTML = "|";
+
 		const repoLink = document.createElement("a");
 		repoLink.href = items[i].repo;
-		repoLink.innerHTML = "(Github)";
+		repoLink.className = "underline hover:font-semibold";
+		repoLink.innerHTML = "Github";
 
 		const header = document.createElement("div");
 		header.className = "flex items-center";
@@ -50,6 +55,7 @@ export function populateProjects(items, id) {
 		body.append(rightBody);
 
 		header.append(projectName);
+		header.append(verticalLine);
 		header.append(repoLink);
 
 		project.append(header);
