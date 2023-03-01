@@ -1,4 +1,4 @@
-import { createTitle } from "./helpers.js";
+import { createTitle, lineBreak } from "./helpers.js";
 
 export function populateExperience(items, id) {
 	const container = $("#" + id);
@@ -15,7 +15,7 @@ export function populateExperience(items, id) {
 			"flex items-center justify-between"
 		);
 
-		// Company name
+		// Title at company
 		$("<h3></h3>")
 			.addClass("text-xl font-semibold mb-0")
 			.text(items[expIndex].title)
@@ -31,13 +31,16 @@ export function populateExperience(items, id) {
 
 		const body = $("<div></div>");
 
-		// Title at company
-		$("<p></p>").html(items[expIndex].title).appendTo(body);
+		// Company name
+		$("<em></em>").html(items[expIndex].company).appendTo(body);
 
-		const detailsList = $("<ul></ul>");
+		const detailsList = $("<ul></ul>").addClass("p-5");
 		for (let index = 0; index < items[expIndex].details.length; index++) {
 			// Create list item for work experience details, list item, to detailsList
-			$("<li></li>").html(items[expIndex].details[index]).appendTo(detailsList);
+			$("<li></li>")
+				.addClass("list-disc")
+				.html(items[expIndex].details[index])
+				.appendTo(detailsList);
 		}
 		detailsList.appendTo(body);
 
@@ -51,6 +54,9 @@ export function populateExperience(items, id) {
 		}
 		tagList.appendTo(body);
 		body.appendTo(expItem);
+		if (expIndex != items.length - 1) {
+			lineBreak().appendTo(expItem);
+		}
 		expItem.appendTo(expList);
 	}
 	expList.appendTo(container);

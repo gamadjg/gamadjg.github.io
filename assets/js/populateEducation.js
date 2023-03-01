@@ -37,9 +37,9 @@ export function populateEducation(items, id) {
 			.appendTo(header);
 
 		// Location
-		$("<p></p>").addClass("").html(items[eduIndex].location).appendTo(body);
+		$("<em></em>").addClass("").html(items[eduIndex].location).appendTo(body);
 
-		const tags = $("<ul></ul>").addClass("flex flex-wrap gap-1 mb-1");
+		const tags = $("<ul></ul>").addClass("flex flex-wrap gap-1");
 		for (let index = 0; index < items[eduIndex].tags.length; index++) {
 			$("<li></li>")
 				.addClass("bg-teal-500 text-white rounded pl-1 pr-1")
