@@ -1,7 +1,7 @@
 export default {
 	bio: [
 		"My name is David, and I am a full-stack developer, transitioned into programming from over six years in the customer service industry ranging from food prep to IT helpdesk/consulting.",
-		"My areas of interest are archery, health & fitness, linguistics, and taking mountains of information and making sense of it",
+		"My areas of interest are archery, health & fitness, linguistics, logistics, and taking mountains of information and making sense of it.",
 	],
 	skills: [
 		{
@@ -14,11 +14,12 @@ export default {
 		},
 		{
 			title: "Front End",
-			skills: "HTML5, CSS3, React, TailwindCSS, Styled Components",
+			skills:
+				"HTML5, CSS3, React, jQuery, TailwindCSS, Styled Components, Bootstrap",
 		},
 		{
 			title: "Back End",
-			skills: "Node.js, Express, jQuery, Vite, Flask, Spring Boot",
+			skills: "Node.js, Express, Vite, Flask, Spring Boot",
 		},
 		{
 			title: "Databases",
@@ -30,7 +31,7 @@ export default {
 		},
 		{
 			title: "Tools",
-			skills: "Postman, Chrome DevTools, ",
+			skills: "Postman, Chrome DevTools",
 		},
 		{
 			title: "Saas products",
@@ -53,7 +54,7 @@ export default {
 			summary:
 				"Web Portfolio to showcase acadmics, skills, projects and contact details in better manner.",
 			repo: "https://github.com/gamadjg/portfolio",
-			techStack: ["HTML5", "CSS3", "JavaScript", "Tailwindcss"],
+			techStack: ["HTML5", "CSS3", "JavaScript", "Tailwindcss", "jQuery"],
 		},
 		{
 			projectName: "Archery Store",
