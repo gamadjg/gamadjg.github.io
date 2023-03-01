@@ -1,76 +1,67 @@
+import { createTitle, lineBreak, verticalLine } from "./helpers.js";
+
 export function populateProjects(items, id) {
-	const container = document.getElementById(id);
+	const container = $("#" + id);
 
-	const sectionTitle = document.createElement("h2");
-	sectionTitle.className = "text-4xl font-semibold mb-1";
-	sectionTitle.innerHTML = "Projects";
+	createTitle("Projects").appendTo(container);
 
-	const projectList = document.createElement("div");
-	projectList.className = "bg-gray-300 rounded p-5";
+	const projectList = $("<div></div>").addClass("bg-gray-300 rounded p-5");
 
 	for (let i = 0; i < items.length; i++) {
-		const projectName = document.createElement("h3");
-		projectName.innerHTML = items[i].projectName;
-		projectName.className = "text-xl font-semibold mb-0";
+		const project = $("<div></div>").addClass("mb-5");
+		const header = $("<div></div>").addClass("flex items-center");
+		const body = $("<div></div>").addClass("grid grid-cols-4 ml-1 p-5");
+		const rightBody = $("<div></div>").addClass("col-start-2 col-span-4");
 
-		const verticalLine = document.createElement("p");
-		verticalLine.className = "ml-1 mr-1";
-		verticalLine.innerHTML = "|";
+		// Project Name
+		$("<h3></h3>")
+			.addClass("text-xl font-semibold mb-0)")
+			.html(items[i].projectName)
+			.appendTo(header);
 
-		const repoLink = document.createElement("a");
-		repoLink.href = items[i].repo;
-		repoLink.className = "underline hover:font-semibold";
-		repoLink.innerHTML = "Github";
+		// Vertical line to separate project name and github link
+		verticalLine().appendTo(header);
 
-		const header = document.createElement("div");
-		header.className = "flex items-center";
+		// Github repo link
+		$("<a></a>")
+			.attr("href", items[i].repo)
+			.addClass("underline hover:font-semibold")
+			.html("GitHub")
+			.appendTo(header);
 
-		const image = document.createElement("i");
-		image.className = "fa-sharp fa-solid fa-image flex self-center";
+		header.appendTo(project);
 
-		const summary = document.createElement("p");
-		summary.innerHTML = items[i].summary;
+		// Project image
+		$("<i></i>")
+			.addClass(
+				"fa-sharp fa-solid fa-image flex self-center justify-self-center"
+			)
+			.appendTo(body);
 
-		const skills = document.createElement("ul");
-		skills.className = "flex flex-wrap gap-1 mb-1";
+		// Project summary
+		$("<p></p>").html(items[i].summary).appendTo(rightBody);
+
+		rightBody.appendTo(body);
+
+		body.appendTo(project);
+
+		// Skills unordered list
+		const skills = $("<ul></ul>").addClass("flex flex-wrap gap-1 mb-1");
+
+		// Loop, a list item is creted for every item in techStack array and appended to skills
 		for (let j = 0; j < items[i].techStack.length; j++) {
-			const skill = document.createElement("li");
-			skill.className = "bg-teal-500 text-white rounded pl-1 pr-1";
-			skill.innerHTML = items[i].techStack[j];
-			skills.append(skill);
+			$("<li></li>")
+				.addClass("bg-teal-500 text-white rounded pl-1 pr-1")
+				.html(items[i].techStack[j])
+				.appendTo(skills);
 		}
+		skills.appendTo(project);
 
-		const rightBody = document.createElement("div");
-		rightBody.className = "col-start-2 col-span-4";
-
-		const body = document.createElement("div");
-		body.className = "grid grid-cols-4 ml-1";
-
-		const project = document.createElement("div");
-		// project.className = "mb-5";
-
-		rightBody.append(summary);
-
-		body.append(image);
-		body.append(rightBody);
-
-		header.append(projectName);
-		header.append(verticalLine);
-		header.append(repoLink);
-
-		project.append(header);
-		project.append(body);
-		project.append(skills);
-
+		// If the current indexed project is the last in the array, do not add a line break.
 		if (i != items.length - 1) {
-			const lineBreak = document.createElement("hr");
-			lineBreak.className = "mb-5 border-black";
-			project.append(lineBreak);
+			lineBreak().appendTo(project);
 		}
-
-		projectList.append(project);
+		project.appendTo(projectList);
 	}
-
-	container.append(sectionTitle);
-	container.append(projectList);
+	projectList.appendTo(container);
 }
