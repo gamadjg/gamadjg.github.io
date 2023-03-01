@@ -10,5 +10,5 @@ export const verticalLine = () => {
 };
 
 export const lineBreak = () => {
-	return $("<hr></hr>").addClass("mb-5 border-black");
+	return $("<hr></hr>").addClass("mb-5 border-black mt-1");
 };
