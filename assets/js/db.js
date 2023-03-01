@@ -6,43 +6,43 @@ export default {
 	skills: [
 		{
 			title: "Languages",
-			skillName: "JavaScript, Python, Java",
-		},
-		{
-			title: "Frameworks/Libraries",
-			skillName: "Reactjs, Vite, Flask, Spring Boot",
-		},
-		{
-			title: "Backend",
-			skillName: "Nodejs, MongoDB, MySQL",
-		},
-		{
-			title: "Cloud",
-			skillName: "AWS(EC2), Heroku",
-		},
-		{
-			title: "Frontend",
-			skillName: "HTML5, CSS3, TailwindCSS, Styled Components",
+			skills: "JavaScript, Python, Java",
 		},
 		{
 			title: "Version Control",
-			skillName: "Git, GitHub",
+			skills: "Git, GitHub",
+		},
+		{
+			title: "Front End",
+			skills: "HTML5, CSS3, React, TailwindCSS, Styled Components",
+		},
+		{
+			title: "Back End",
+			skills: "Node.js, Express, jQuery, Vite, Flask, Spring Boot",
+		},
+		{
+			title: "Databases",
+			skills: "MongoDB, MySQL",
+		},
+		{
+			title: "Cloud",
+			skills: "AWS, Heroku",
 		},
 		{
 			title: "Tools",
-			skillName: "Postman, Chrome DevTools, ",
+			skills: "Postman, Chrome DevTools, ",
 		},
 		{
 			title: "Saas products",
-			skillName: "FreshDesk, Jira, Service Now",
+			skills: "FreshDesk, Jira, Service Now",
 		},
 		{
 			title: "Editors",
-			skillName: "VS Code, IntelliJ, Eclipse",
+			skills: "VS Code, IntelliJ, Eclipse",
 		},
 		{
-			title: "Key Soft Skills",
-			skillName:
+			title: "Some Soft Skills",
+			skills:
 				"Adaptability, Critical thinking, Creativity, Learning on the fly, Active listening, Participation, Task prioritization and planning",
 		},
 	],
@@ -129,8 +129,45 @@ export default {
 			location: "San Francisco",
 			title: "IT Systems Specialist",
 			duration: "2018 - 2022",
-			details: ["IT Operations consulting within the therapeutics domain."],
-			tags: ["Python", "PowerShell"],
+			details: [
+				"IT Operations consulting within the therapeutics domain.",
+				"Created an onboarding process which leveraged SAML and SSO Okta-integrated applications, RMM policies, Microsoft Forms, and email automation. The new process ensured that all IT Security policies were met, and necessary departments and staff were ready for new hires for their first day, resulting in one day turn-around setup time.",
+				"Managed identity and privileged access management across a suite of over 50 applications for 200+ users which reduced the time-to-complete quarterly audit’s down to one day.",
+				"Actively monitored software release versions and used PowerShell to conduct silent and unobtrusive critical and scheduled patch management for over 300 machines to maintain cyber security.",
+			],
+			tags: [
+				"Python",
+				"PowerShell",
+				"Soc 2 Compliance",
+				"Domain Administration",
+				"Okta",
+				"SAML",
+				"SSO integrations",
+				"MS Azure",
+				"MS SharePoint",
+				"Identity and priveled access management",
+				"Process automation",
+				"Auditing",
+				"Patch Management",
+				"RMM",
+				"SCIM",
+			],
+			icon: "",
+		},
+		{
+			company: "CSU Sacramento, Housing & Residential Life",
+			location: "Sacramento",
+			title: "IT Student Assistant",
+			duration: "2013 - 2016",
+			details: [
+				"Created and improved existing documentation for student/staff processes.",
+				"Managed IT ticket queue for housing department, numbering 1800+ students/staff.",
+				"LAN/WAN administration across the six residence halls",
+				"Developed workflows and presented to train housing staff on proper handling of IT requests and procedures.",
+				"Performed routine maintenance on student/staff hardware and software.",
+				"Normalized student directory for a workflow application which reduced student congestion on move-in day.",
+			],
+			tags: ["ServiceNow", "HTML", "CSS"],
 			icon: "",
 		},
 	],
