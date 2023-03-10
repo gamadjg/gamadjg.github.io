@@ -5,7 +5,9 @@ export function populateEducation(items, id) {
 
 	createTitle("Education").appendTo(container);
 
-	const eduList = $("<div></div>").addClass("bg-gray-300 rounded p-5");
+	const eduList = $("<div></div>").addClass(
+		"bg-gray-300 rounded p-5 shadow-lg"
+	);
 
 	for (let eduIndex = 0; eduIndex < items.length; eduIndex++) {
 		const body = $("<div></div>");
@@ -42,7 +44,7 @@ export function populateEducation(items, id) {
 		const tags = $("<ul></ul>").addClass("flex flex-wrap gap-1");
 		for (let index = 0; index < items[eduIndex].tags.length; index++) {
 			$("<li></li>")
-				.addClass("bg-teal-500 text-white rounded pl-1 pr-1")
+				.addClass("bg-teal-400 rounded pl-1 pr-1 shadow-sm")
 				.html(items[eduIndex].tags[index])
 				.appendTo(tags);
 		}

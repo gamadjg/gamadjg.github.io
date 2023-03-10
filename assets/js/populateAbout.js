@@ -5,7 +5,9 @@ export function populateAbout(items, id) {
 
 	createTitle("About").appendTo(container);
 
-	const aboutContainer = $("<div></div>").addClass("bg-gray-300 rounded p-5");
+	const aboutContainer = $("<div></div>").addClass(
+		"bg-gray-300 rounded p-5 shadow-lg"
+	);
 
 	for (let index = 0; index < items.length; index++) {
 		const aboutItem = $("<div></div>").addClass("mb-3").html(items[index]);

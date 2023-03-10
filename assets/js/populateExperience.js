@@ -6,7 +6,9 @@ export function populateExperience(items, id) {
 	// Return created h2 title, append to container
 	createTitle("Work Experience").appendTo(container);
 
-	const expList = $("<div></div>").addClass("bg-gray-300 rounded p-5");
+	const expList = $("<div></div>").addClass(
+		"bg-gray-300 rounded p-5 shadow-lg"
+	);
 
 	for (let expIndex = 0; expIndex < items.length; expIndex++) {
 		const expItem = $("<div></div>").addClass("mb-5");
@@ -49,7 +51,7 @@ export function populateExperience(items, id) {
 			// tags associated with work experience
 			$("<li></li>")
 				.html(items[expIndex].tags[tagIndex])
-				.addClass("bg-teal-500 rounded text-white pl-1 pr-1")
+				.addClass("bg-teal-400 rounded  pl-1 pr-1 shadow-sm")
 				.appendTo(tagList);
 		}
 		tagList.appendTo(body);

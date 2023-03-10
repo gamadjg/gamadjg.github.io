@@ -5,7 +5,9 @@ export function populateProjects(items, id) {
 
 	createTitle("Projects").appendTo(container);
 
-	const projectList = $("<div></div>").addClass("bg-gray-300 rounded p-5");
+	const projectList = $("<div></div>").addClass(
+		"bg-gray-300 rounded p-5 shadow-lg"
+	);
 
 	for (let i = 0; i < items.length; i++) {
 		const project = $("<div></div>").addClass("mb-5");
@@ -51,7 +53,7 @@ export function populateProjects(items, id) {
 		// Loop, a list item is creted for every item in techStack array and appended to skills
 		for (let j = 0; j < items[i].techStack.length; j++) {
 			$("<li></li>")
-				.addClass("bg-teal-500 text-white rounded pl-1 pr-1")
+				.addClass("bg-teal-400 rounded pl-1 pr-1 shadow-sm")
 				.html(items[i].techStack[j])
 				.appendTo(skills);
 		}

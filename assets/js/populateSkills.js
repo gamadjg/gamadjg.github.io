@@ -6,7 +6,7 @@ export function populateSkills(items, id) {
 	createTitle("Skills").appendTo(container);
 
 	const skillsContainer = $("<div></div>").addClass(
-		"grid sm:grid-cols-2 bg-gray-300 rounded p-5"
+		"grid sm:grid-cols-2 bg-gray-300 rounded p-5 shadow-lg"
 	);
 
 	for (let i = 0; i < items.length; i++) {

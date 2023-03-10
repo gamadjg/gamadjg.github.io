@@ -1,7 +1,6 @@
 export default {
 	bio: [
-		"My name is David, and I am a full-stack developer, transitioned into programming from over six years in the customer service industry ranging from food prep to IT helpdesk/consulting.",
-		"My areas of interest are archery, health & fitness, linguistics, logistics, and taking mountains of information and making sense of it.",
+		"My interests lie within architecting and designing foundations for scaling solutions. Throughout 4 years of startup IT Operations consulting, my enthusiasm peaked when I would find myself picking up Python or PowerShell to automate a task. Realizing that a solid foundation and some creative organization went a very long way in reducing future issues for myself and everyone around me, I made the decision to expand my programming knowledge past scripting and into learning the ins and outs of full-stack software development. After a year of teaching myself via self paced online courses, I enrolled myself into a rigorous coding bootcamp to flesh out my knowledge and fill in any remaining gaps. ",
 	],
 	skills: [
 		{
@@ -27,15 +26,11 @@ export default {
 		},
 		{
 			title: "Cloud",
-			skills: "AWS, Heroku",
+			skills: "AWS, Heroku, Google Cloud",
 		},
 		{
 			title: "Tools",
-			skills: "Postman, Chrome DevTools",
-		},
-		{
-			title: "Saas products",
-			skills: "FreshDesk, Jira, Service Now",
+			skills: "Postman, Chrome DevTools, FreshDesk, Jira, Service Now",
 		},
 		{
 			title: "Editors",
