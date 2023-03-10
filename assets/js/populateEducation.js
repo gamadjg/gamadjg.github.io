@@ -17,11 +17,13 @@ export function populateEducation(items, id) {
 		);
 		const leftHeader = $("<div></div>").addClass("flex items-center");
 
+		// Title for each education item
 		$("<h3></h3>")
 			.addClass("text-xl font-semibold")
 			.html(items[eduIndex].title)
 			.appendTo(leftHeader);
 
+		// If there are links in the education item, create a divider and list them
 		if (items[eduIndex].link != "") {
 			verticalLine().appendTo(leftHeader);
 			$("<a></a>")
@@ -41,6 +43,13 @@ export function populateEducation(items, id) {
 		// Location
 		$("<em></em>").addClass("").html(items[eduIndex].location).appendTo(body);
 
+		// Image
+		$("<img></img>")
+			.attr("src", `./assets/images/${items[eduIndex].image}`)
+			.addClass("w-28 py-5")
+			.appendTo(body);
+
+		// List out tags related to each education item
 		const tags = $("<ul></ul>").addClass("flex flex-wrap gap-1");
 		for (let index = 0; index < items[eduIndex].tags.length; index++) {
 			$("<li></li>")

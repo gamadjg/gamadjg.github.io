@@ -13,7 +13,9 @@ export function populateProjects(items, id) {
 		const project = $("<div></div>").addClass("mb-5");
 		const header = $("<div></div>").addClass("flex items-center");
 		const body = $("<div></div>").addClass("grid grid-cols-4 ml-1 p-5");
-		const rightBody = $("<div></div>").addClass("col-start-2 col-span-4");
+		const rightBody = $("<div></div>").addClass(
+			"col-start-2 col-span-4 flex items-center"
+		);
 
 		// Project Name
 		$("<h3></h3>")
@@ -33,18 +35,20 @@ export function populateProjects(items, id) {
 
 		header.appendTo(project);
 
-		// Project image
-		$("<i></i>")
-			.addClass(
-				"fa-sharp fa-solid fa-image flex self-center justify-self-center"
-			)
-			.appendTo(body);
+		if (items[i].image == "") {
+			$("<i></i>").addClass("fa-sharp fa-solid fa-image").appendTo(body);
+		} else {
+			// Project image
+			$("<img></img>")
+				.attr("src", `./assets/images/project-pics/${items[i].image}`)
+				.addClass("w-36")
+				.appendTo(body);
+		}
 
 		// Project summary
 		$("<p></p>").html(items[i].summary).appendTo(rightBody);
 
 		rightBody.appendTo(body);
-
 		body.appendTo(project);
 
 		// Skills unordered list

@@ -19,7 +19,7 @@ export function populateSkills(items, id) {
 			.appendTo(subContainer);
 
 		// generate a p tag and append the skills array to it, then append to the subContainer
-		$("<p></p>").html(items[i].skills).appendTo(subContainer);
+		$("<p></p>").html(items[i].skills).addClass("px-1").appendTo(subContainer);
 
 		subContainer.appendTo(skillsContainer);
 	}

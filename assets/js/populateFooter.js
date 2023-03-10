@@ -12,7 +12,7 @@ export function populateFooter(items, id) {
 	rightFooter.className = "flex justify-between gap-5";
 	for (let i = 0; i < items.profiles.length; i++) {
 		const image = document.createElement("img");
-		image.src = `./assets/images/${items.profiles[i].icon}.png`;
+		image.src = `./assets/images/${items.profiles[i].image}`;
 		image.alt = `${items.profiles[i].icon} thumbnail`;
 		image.className = "w-8";
 
