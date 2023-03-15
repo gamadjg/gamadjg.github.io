@@ -33,6 +33,16 @@ export function populateProjects(items, id) {
 			.html("GitHub")
 			.appendTo(header);
 
+		if (items[i].liveLink != "") {
+			verticalLine().appendTo(header);
+
+			$("<a></a>")
+				.attr("href", items[i].liveLink)
+				.addClass("underline hover:font-semibold")
+				.html("Live Preview")
+				.appendTo(header);
+		}
+
 		header.appendTo(project);
 
 		if (items[i].image == "") {

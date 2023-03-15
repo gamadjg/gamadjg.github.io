@@ -47,6 +47,7 @@ export default {
 		{
 			projectName: "Web Portfolio",
 			image: "portfolio.png",
+			liveLink: "",
 			summary:
 				"Responsive web portfolio to showcase acadmics, skills, and projects.",
 			repo: "https://github.com/gamadjg/portfolio",
@@ -55,6 +56,7 @@ export default {
 		{
 			projectName: "Archery Store",
 			image: "",
+			liveLink: "",
 			summary: "Ecommerce archery store",
 			repo: "https://github.com/gamadjg/archery-store",
 			techStack: [
@@ -70,6 +72,7 @@ export default {
 		{
 			projectName: "Restaurant Mr.Camaron",
 			image: "mrcamaron.png",
+			liveLink: "",
 			summary: "Responsive mexican food website",
 			repo: "https://github.com/gamadjg/restaurant-mr.camaron",
 			techStack: [
@@ -85,6 +88,7 @@ export default {
 		{
 			projectName: "Text Parser",
 			image: "",
+			liveLink: "",
 			summary: "Semantic Text Comparator",
 			repo: "https://github.com/gamadjg/text-parser",
 			techStack: [
@@ -101,6 +105,7 @@ export default {
 		{
 			projectName: "Odin Project: Members Only",
 			image: "",
+			liveLink: "",
 			summary: "",
 			repo: "https://github.com/gamadjg/members-only",
 			techStack: ["Javascript", "NodeJS"],
@@ -108,14 +113,17 @@ export default {
 		{
 			projectName: "Odin Project: Bang! Card Game Inventory",
 			image: "",
+			liveLink: "",
 			summary: "",
 			repo: "https://github.com/gamadjg/bang-inventory-app",
 			techStack: ["Javascript", "NodeJS"],
 		},
 		{
 			projectName: "Odin Project: Calculator",
-			image: "",
-			summary: "",
+			image: "calculator.png",
+			liveLink: "https://gamadjg.github.io/odin-project-calculator/",
+			summary:
+				"Calculator application which served as the initial introduction to logic and DOM manipulation with javascript. Revamped in 2023 to include jQuery, and Tailwindcss.",
 			repo: "https://github.com/gamadjg/calculator",
 			techStack: ["Javascript", "NodeJS", "Tailwindcss"],
 		},
