@@ -6,42 +6,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/38da9ec89a.js" crossorigin="anonymous"></script>
-    <script type="module" src="assets/js/main.js"></script>
+    <script type="module" src="src/js/main.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"
+        integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <title>Dgama Portfolio</title>
 </head>
 
 <body class="font-['Montserrat']">
     <div class="w-full lg:grid lg:grid-cols-8 overflow-auto">
-        <div class="col-start-1 col-span-2 flex justify-center ">
-            <div class="w-64 p-5 h-full bg-gray-300 rounded fixed hidden lg:block">
-                <img src="assets/images/headshot_square.jpg" alt="dgama headshot" class="rounded-full w-48 m-auto" />
-                <p class="text-3xl font-medium m-auto flex justify-center p-3">David Gama</p>
-                <ul class="flex flex-col items-center p-3">
-                    <li><a href="#about" class="navLink m-auto underline hover:underline hover:font-semibold">About</a>
-                    </li>
-                    <li><a href="#skills"
-                            class="navLink m-auto underline hover:underline hover:font-semibold">Skills</a></li>
-                    <li><a href="#projects"
-                            class="navLink m-auto underline hover:underline hover:font-semibold">Projects</a></li>
-                    <li><a href="#experience" class="navLink m-auto underline hover:underline hover:font-semibold">Work
-                            Experience</a></li>
-                    <li><a href="#education"
-                            class="navLink m-auto underline hover:underline hover:font-semibold">Education</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <div class=" col-end-9 col-span-6">
+        <nav id="nav" class="col-start-1 col-span-2 flex justify-center "></nav>
+        <header id="header" class="col-end-9 col-span-6">
+            <h1 class="mr-5 mb-5 ml-5 text-4xl font-semibold">Welcome to My Portfolio!</h1>
+        </header>
+        <main class="col-end-9 col-span-6">
             <section id="about" class="mr-5 mb-5 ml-5"></section>
             <section id="skills" class="m-5"></section>
             <section id="projects" class="m-5"></section>
             <section id="experience" class="m-5"></section>
             <section id="education" class="m-5"></section>
-            <section id="footer" class="mt-5 mr-5 ml-5"></section>
-        </div>
+        </main>
+        <footer id="footer" class="mt-5 mr-5 ml-5 col-end-9 col-span-6"></footer>
     </div>
-    <script src="./assets/js/jquery.min.js"></script>
 </body>
 
 </html>
