@@ -23,7 +23,7 @@ export default {
 		},
 		{
 			title: "Databases",
-			skills: "MongoDB, MySQL",
+			skills: "MongoDB, MongoDB Atlas, MySQL",
 		},
 		{
 			title: "Cloud",
@@ -82,6 +82,7 @@ export default {
 				"MongoDB",
 				"Express",
 				"Axios",
+				"nodemailer",
 				"Google Maps Api",
 			],
 		},
@@ -104,11 +105,19 @@ export default {
 		},
 		{
 			projectName: "Odin Project: Members Only",
-			image: "",
+			image: "members-only.png",
 			liveLink: "",
 			summary: "",
 			repo: "https://github.com/gamadjg/members-only",
-			techStack: ["Javascript", "NodeJS"],
+			techStack: [
+				"Javascript",
+				"NodeJS",
+				"Passport",
+				"Bcrypt",
+				"Express",
+				"Mongoose",
+				"MongoDB Atlas",
+			],
 		},
 		{
 			projectName: "Odin Project: Bang! Card Game Inventory",
