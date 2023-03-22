@@ -97,7 +97,6 @@ export default {
 				"Flask",
 				"Jinja2",
 				"Tailwindcss",
-				"Excalidraw",
 				"MySQL",
 				"NLTK",
 				"Bcrypt",
@@ -106,8 +105,8 @@ export default {
 		{
 			projectName: "Odin Project: Members Only",
 			image: "members-only.png",
-			liveLink: "",
-			summary: "",
+			liveLink: "https://members-only-381404.wl.r.appspot.com/",
+			summary: "Messageboard with multi-tierd authentication.",
 			repo: "https://github.com/gamadjg/members-only",
 			techStack: [
 				"Javascript",
@@ -121,11 +120,18 @@ export default {
 		},
 		{
 			projectName: "Odin Project: Bang! Card Game Inventory",
-			image: "",
-			liveLink: "",
-			summary: "",
+			image: "bang.png",
+			liveLink: "https://murmuring-meadow-17805.herokuapp.com/",
+			summary: "Card inventory application based around the game, Bang!",
 			repo: "https://github.com/gamadjg/bang-inventory-app",
-			techStack: ["Javascript", "NodeJS"],
+			techStack: [
+				"Javascript",
+				"NodeJS",
+				"Express",
+				"EJS",
+				"Mongoose",
+				"MongoDB Atlas",
+			],
 		},
 		{
 			projectName: "Odin Project: Calculator",
