@@ -12,9 +12,12 @@ export function populateProjects(items, id) {
 	for (let i = 0; i < items.length; i++) {
 		const project = $("<div></div>").addClass("mb-5");
 		const header = $("<div></div>").addClass("flex items-center");
-		const body = $("<div></div>").addClass("grid grid-cols-4 ml-1 p-5");
+		const body = $("<div></div>").addClass("grid grid-cols-4 ml-1 p-3 gap-5");
+		const leftBody = $("<div></div>").addClass(
+			"flex items-center justify-center"
+		);
 		const rightBody = $("<div></div>").addClass(
-			"col-start-2 col-span-4 flex items-center"
+			"col-start-2 col-span-4 flex flex-col"
 		);
 
 		// Project Name
@@ -51,12 +54,27 @@ export function populateProjects(items, id) {
 			// Project image
 			$("<img></img>")
 				.attr("src", `src/assets/images/project-pics/${items[i].image}`)
-				.addClass("w-36")
-				.appendTo(body);
+				.addClass("w-48")
+				.appendTo(leftBody);
 		}
+		leftBody.appendTo(body);
 
 		// Project summary
-		$("<p></p>").html(items[i].summary).appendTo(rightBody);
+		$("<p></p>")
+			.html(items[i].summary)
+			.addClass("font-medium text-lg")
+			.appendTo(rightBody);
+
+		// Generate unordered project details list
+		const detailsList = $("<ul></ul>").addClass("px-5 py-1");
+		for (let index = 0; index < items[i].details.length; index++) {
+			// Create list item from project details array
+			$("<li></li>")
+				.addClass("list-disc")
+				.html(items[i].details[index])
+				.appendTo(detailsList);
+		}
+		detailsList.appendTo(rightBody);
 
 		rightBody.appendTo(body);
 		body.appendTo(project);
